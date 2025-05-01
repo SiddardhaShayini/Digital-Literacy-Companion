@@ -1,25 +1,22 @@
 import re
 import string
 import random
+import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-import nltk
 from data.responses import get_responses
 from data.topics import get_topics
 import streamlit as st
 
 # Download necessary NLTK data
-try:
-    nltk.data.find('tokenizers/punkt')
-    nltk.data.find('corpora/stopwords')
-    nltk.data.find('corpora/wordnet')
-except LookupError:
-    nltk.download('punkt')
-    nltk.download('stopwords')
-    nltk.download('wordnet')
+# We use nltk.download with download_dir specified to ensure data is stored in a location
+# that the application can access and ensure all necessary data is downloaded
+nltk.download('punkt', download_dir='/home/runner/nltk_data')
+nltk.download('stopwords', download_dir='/home/runner/nltk_data')
+nltk.download('wordnet', download_dir='/home/runner/nltk_data')
 
-# Initialize lemmatizer for word normalization
+# Initialize lemmatizer for word normalization after downloads are complete
 lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words('english'))
 
@@ -29,9 +26,11 @@ def preprocess_text(text):
     text = text.lower()
     text = re.sub(r'[{}]'.format(re.escape(string.punctuation)), ' ', text)
     
-    # Tokenize and remove stopwords
-    tokens = word_tokenize(text)
-    tokens = [lemmatizer.lemmatize(token) for token in tokens if token.isalpha() and token not in stop_words]
+    # Simple tokenization by splitting on whitespace
+    raw_tokens = text.split()
+    
+    # Remove stopwords and apply lemmatization
+    tokens = [lemmatizer.lemmatize(token) for token in raw_tokens if token.isalpha() and token not in stop_words]
     
     return tokens
 
