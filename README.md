@@ -8,6 +8,13 @@ A user-friendly chatbot designed to help parents and elderly users navigate the 
 
 The Digital Literacy Companion is a Streamlit-based web application that provides clear, jargon-free guidance on common digital topics through a simple chatbot interface. The companion focuses on making technology more accessible by breaking down complex concepts into easy-to-understand explanations and step-by-step instructions.
 
+## 🌐 Live Demo
+
+Check out the live app here:  
+[🚀 Launch the Digital Literacy Companion](https://digital-literacy-companion.streamlit.app/)
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://digital-literacy-companion.streamlit.app/)
+
 ## Features
 
 - **Simple Chat Interface**: Ask questions in everyday language
