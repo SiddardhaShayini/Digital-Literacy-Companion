@@ -12,9 +12,14 @@ import streamlit as st
 # Download necessary NLTK data
 # We use nltk.download with download_dir specified to ensure data is stored in a location
 # that the application can access and ensure all necessary data is downloaded
-nltk.download('punkt', download_dir='/home/runner/nltk_data')
-nltk.download('stopwords', download_dir='/home/runner/nltk_data')
-nltk.download('wordnet', download_dir='/home/runner/nltk_data')
+# nltk.download('punkt', download_dir='/home/runner/nltk_data')
+# nltk.download('stopwords', download_dir='/home/runner/nltk_data')
+# nltk.download('wordnet', download_dir='/home/runner/nltk_data')
+
+# Let NLTK download to its default location by removing the download_dir argument:
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
 
 # Initialize lemmatizer for word normalization after downloads are complete
 lemmatizer = WordNetLemmatizer()
