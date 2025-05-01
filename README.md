@@ -56,4 +56,10 @@ The Digital Literacy Companion is a Streamlit-based web application that provide
 ## Running the Application
 
 Run the following command in the project directory:
-
+```
+streamlit run app.py
+```
+Open:
+```
+http://localhost:5000/
+```
