@@ -92,11 +92,11 @@ def process_query(user_input):
 def get_fallback_response():
     """Return a random fallback response when no good match is found"""
     fallback_responses = [
-        "I'm not sure I understand. Could you try rephrasing your question?",
-        "I don't have that information yet. Let me know if I can help with something else.",
-        "I'm still learning! Could you ask me about a different digital topic?",
-        "I'm not familiar with that topic yet. Would you like to know about basic internet safety, social media, or email instead?",
-        "I'm sorry, I don't have an answer for that. Is there a different digital topic I can help you with?"
+        "Hmm, I'm not quite following that. Could you try rephrasing your question? I'm eager to help! 😊",
+        "Oh! I don't have that information in my digital toolkit yet. Let me know if I can help with something else - I know lots about internet basics and online safety!",
+        "I'm still learning the digital ropes! Could you ask me about a different tech topic? I'm really good with email, social media, and smartphone tips! 📱",
+        "That's a new one for me! Would you like to explore basic internet safety, social media, or email tips instead? Those are some of my favorite topics to chat about!",
+        "Oops! That question stumped me. Is there another digital topic I can help with? I'm your buddy for all things tech! 💻"
     ]
     return random.choice(fallback_responses)
 
@@ -112,11 +112,11 @@ def get_initial_message():
     topics_text = ", ".join(random_topics)
     
     return f"""
-    Welcome to the Digital Literacy Companion! I'm here to help you navigate the digital world with confidence.
+    Hello there! 👋 I'm DigiBuddy, your friendly tech-savvy pal! I'm here to help you conquer the digital world with confidence and a smile!
     
-    You can ask me questions about:
+    You can ask me about anything tech-related like:
     - {topics_text}
-    - And many more digital topics!
+    - And so many more digital topics! 💻 📱 🔒
     
-    Feel free to type your question below or explore the topics in the sidebar.
+    No question is too simple - that's what buddies are for! Type your question below or browse the topics in the sidebar. Let's make technology fun together!
     """
