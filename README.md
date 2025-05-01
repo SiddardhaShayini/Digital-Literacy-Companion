@@ -15,13 +15,6 @@ Check out the live app here:
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://digital-literacy-companion.streamlit.app/)
 
-<a href="https://digital-literacy-companion.streamlit.app/" target="_blank">🚀 Launch the Digital Literacy Companion</a>
-
-<a href="https://digital-literacy-companion.streamlit.app/" target="_blank">
-  <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Open in Streamlit">
-</a>
-
-
 ## Features
 
 - **Simple Chat Interface**: Ask questions in everyday language
